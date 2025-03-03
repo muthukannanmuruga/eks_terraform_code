@@ -1,5 +1,13 @@
-git filter-branch --tree-filter 'rm -rf .terraform/' HEAD
+pip install git-filter-repo
+git filter-repo --path .terraform/ --invert-paths --force
+
+.gitignore
+
+# Local Terraform directories
+**/.terraform/*
+*.tfstate
+*.tfstate.backup
 
 And then,
 
- git push origin master
+git push origin master --force
