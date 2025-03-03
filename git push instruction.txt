@@ -9,5 +9,5 @@ git filter-repo --path .terraform/ --invert-paths --force
 *.tfstate.backup
 
 And then,
-
+git remote add origin https://github.com/muthukannanmuruga/eks_terraform_code.git
 git push origin master --force
